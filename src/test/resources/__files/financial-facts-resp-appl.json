@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "stockCode": "APPL",
+  "companyName": "Apple Inc.",
+  "currentPrice": 179.35,
+  "previousClosePrice": 180.10,
+  "yield": 0.49,
+  "priceToEarningsRatio": 31.98
+}

@@ -1,0 +1,5 @@
+server:
+  port: 9000
+
+stocks-api:
+  base-url: http://localhost:7070
