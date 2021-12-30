@@ -38,10 +38,12 @@ public class StocksService {
             //let's suppose code calls an internal method to perform any business logic
             return performInternalBusinessLogic(response.getBody());
         } catch(Exception ex) {
-            if(ex instanceof HttpClientErrorException && ((HttpClientErrorException) ex).getStatusCode().equals(HttpStatus.NOT_FOUND)){
+            if(ex instanceof HttpClientErrorException &&
+                    ((HttpClientErrorException) ex).getStatusCode().equals(HttpStatus.NOT_FOUND)){
                 throw new StockNotFoundException(code);
             } else {
-                throw new StockServiceException("An error happened to return stock details from financial facts", ex);
+                throw new StockServiceException("An error happened to return stock details from financial " +
+                        "facts", ex);
             }
         }
     }
